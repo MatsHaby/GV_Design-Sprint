@@ -1,0 +1,128 @@
+$primary-color: #9a0017;
+$secondary-color1: #9d8471;
+$secondary-color2: #25271c;
+$hover-color: #f8cc80;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//  HERO HEADER
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/assets/img/hero.jpg');
+    color: #ffffff;
+    overflow: hidden;
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 300px;
+    }
+
+    h1 {
+        font-family: 'Merienda', cursive;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 72px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+
+    .btn-primary__hero {
+        width: 278.86px;
+        height: 53px;
+        font-size: 24px;
+        margin-top: 30px;
+        color: inherit;
+        border: none;
+    }
+}
+
+.btn {
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: $primary-color;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Archivo', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+
+    &:hover {
+        border: 3px solid #ffffff;
+        background: rgba(154, 0, 23, 0.6);
+    }
+
+    &:active {
+        background: $hover-color;
+    }
+}
+
+// TABLET
+@media screen and (min-width: 768px) {
+    .hero {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        h1 {
+            font-size: 80px;
+            line-height: 116px;
+            text-align: left;
+        }
+        &-body {
+            max-width: 650px;
+            display: block;
+            position: absolute;
+            top: 30%;
+        }
+        .btn-primary__hero {
+            width: 342px;
+            height: 65px;
+            font-size: 26px;
+        }
+    }
+}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+    .hero {
+        position: relative;
+        display: block;
+        h1 {
+            font-size: 100px;
+        }
+        &-body {
+            position: absolute;
+            left: 118px;
+            top: 250px;
+            max-width: 900px;
+            display: block;
+        }
+        .btn-primary__hero {
+            margin-top: 75px;
+            width: 342px;
+            height: 65px;
+            font-size: 26px;
+        }
+    }
+}
