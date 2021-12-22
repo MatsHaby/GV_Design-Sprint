@@ -77,6 +77,43 @@ $hover-color: #f8cc80;
     }
 }
 
+.cookie {
+    background: #25271c;
+    color: #ffffff;
+    height: 105px;
+    width: 100%;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px 0 40px;
+    .cookie__button {
+        background: #eaa324;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        width: 231px;
+        height: 53px;
+        border: none;
+
+        &:hover {
+            background: #ffd68c;
+        }
+
+        &:active {
+            text-decoration-line: underline;
+            color: #9a0017;
+        }
+    }
+
+    .cookie-text {
+        max-width: 968px;
+    }
+}
+
 // TABLET
 @media screen and (min-width: 768px) {
     .hero {
