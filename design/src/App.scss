@@ -77,6 +77,48 @@ $hover-color: #f8cc80;
     }
 }
 
+.cookie {
+    display: flex;
+    flex-direction: column;
+    background: #25271c;
+    color: #ffffff;
+    min-height: 212px;
+    width: 100%;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px 30px 30px;
+    &__button {
+        background: #eaa324;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        width: 178px;
+        height: 39px;
+        border: none;
+        margin-top: 20px;
+
+        &:hover {
+            background: #ffd68c;
+        }
+
+        &:active {
+            text-decoration-line: underline;
+            color: #9a0017;
+        }
+    }
+
+    &-text {
+        min-width: 339px;
+        font-size: 14px;
+        font-family: 'Rubik', sans-serif;
+        line-height: 22px;
+    }
+}
+
 // TABLET
 @media screen and (min-width: 768px) {
     .hero {
@@ -101,6 +143,14 @@ $hover-color: #f8cc80;
             font-size: 26px;
         }
     }
+
+    .cookie {
+        flex-direction: row;
+        min-height: 104px;
+        &-text {
+            max-width: 534px;
+        }
+    }
 }
 
 // Desktop
@@ -123,6 +173,18 @@ $hover-color: #f8cc80;
             width: 342px;
             height: 65px;
             font-size: 26px;
+        }
+    }
+
+    .cookie {
+        &__button {
+            font-size: 25px;
+            width: 268px;
+            height: 58px;
+        }
+
+        &-text {
+            max-width: 968px;
         }
     }
 }
