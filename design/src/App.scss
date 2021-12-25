@@ -134,6 +134,7 @@ $hover-color: #f8cc80;
 .navbar {
   height: 96px;
   background: #25271C;
+  position: sticky;
 
   .navbar-content {
     height: auto;
@@ -167,6 +168,19 @@ $hover-color: #f8cc80;
         text-align: right;
         text-transform: uppercase;
         color: #fff;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 5px;
+    }
+
+    li:hover {
+        color: #f8cc80;
+        border-bottom: 2px solid #f8cc80;
+    }
+
+    li:active {
+        color: #fff;
+        border-bottom: 2px solid #fff;
     }
 }
 
