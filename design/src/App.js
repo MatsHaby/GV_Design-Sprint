@@ -6,10 +6,13 @@ import './App.scss';
 
 function App() {
     const [visibleCookie, setVisibleCookie] = useState(true);
+    const [dropdownMenu, setDropdownMenu] = useState(false);
 
     return (
         <div className="App">
-            <Navbar /> 
+            <Navbar 
+                dropdownMenu={dropdownMenu}
+                setDropdownMenu={setDropdownMenu}/> 
             <Header />
             {visibleCookie && (
                 <Cookie

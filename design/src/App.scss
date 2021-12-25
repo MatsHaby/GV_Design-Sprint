@@ -247,6 +247,14 @@ $hover-color: #f8cc80;
 }
 
 // menu burger
+.menu-btn {
+    cursor: pointer;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
 .menu-burger {
     position: relative;
     width: 55px;
@@ -254,7 +262,7 @@ $hover-color: #f8cc80;
     background: rgb(255, 255, 255);
     transition: all .1s ease-in-out;
     margin: 0 auto;
-    top: 5px;
+    top: 18px;
 }
 
 .menu-burger::before,

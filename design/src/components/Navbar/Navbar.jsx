@@ -4,7 +4,7 @@ import getWindowDimensions from './WindowDimensions';
 
 
 
-const Navbar = () => {
+const Navbar = ({ dropdownMenu, setDropdownMenu }) => {
 
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
   
@@ -18,6 +18,10 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    const handleClick = () => {
+        setDropdownMenu(!dropdownMenu);
+        console.log(dropdownMenu)
+    };
 
     return (
         <div className='navbar'>
@@ -27,7 +31,9 @@ const Navbar = () => {
                 </figure>
                 <div className='navbar-menu'>
                     {windowDimensions.width < 1024 && (
-                        <div className='menu-burger'></div>
+                        <div className={dropdownMenu ? 'menu-btn' : 'menu-btn is-active'} onClick={handleClick}>
+                            <div className='menu-burger'/>
+                        </div>
                     )}
                     {windowDimensions.width >= 1024 && (
                         <ul className='menu-links'>
