@@ -234,6 +234,7 @@ $hover-color: #f8cc80;
         cursor: pointer;
         border-bottom: 2px solid transparent;
         padding-bottom: 5px;
+        width: max-content;
     }
 
     li:hover {
@@ -249,15 +250,15 @@ $hover-color: #f8cc80;
 
 .menu-links.dropdown {
     position: relative;
-    top: 20%;
+    margin: 40px;
 
     li {
         display: block;
         text-align: center;
-        width: max-content;
-        text-align: center;
         margin: 0 auto;
         margin-bottom: 40px;
+        line-height: 1.2em;
+        font-size: 30px;
     }
 }
 
@@ -314,7 +315,7 @@ $hover-color: #f8cc80;
 // dropdown menu 
 
 .dropdown-menu-wrap {
-    position: fixed;
+    position: absolute;
     z-index: 9;
     width: 100vw;
     height: 0;
@@ -322,20 +323,20 @@ $hover-color: #f8cc80;
     opacity: 0;
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
-    
 }
 
 .dropdown-menu-wrap.is-active {
-    min-height: max-content;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 96px);
+    min-height: 500px;
     opacity: 1;
 }
 
 .dropdown-menu {
-    height: 100%;
     opacity: 0;
     text-align: center;
+    position: relative;
+    top: 15%;
 }
   
 .dropdown-menu.is-active {

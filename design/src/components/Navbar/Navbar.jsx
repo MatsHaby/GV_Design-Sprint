@@ -49,7 +49,7 @@ const Navbar = ({ dropdownMenu, setDropdownMenu }) => {
             <div className={dropdownMenu ? 'dropdown-menu is-active' : 'dropdown-menu'}>
                 <ul className='menu-links dropdown'>
                     <li>Årets smaker</li>
-                    <li>Tidigare års smaker</li>
+                    <li>Tidigare års <br /> smaker</li>
                     <li>Om Glögga AB</li>
                     <li>Kontakt</li>
                 </ul>
