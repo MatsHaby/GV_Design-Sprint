@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import logo from '../../assets/svg/muledWine.svg';
 import getWindowDimensions from './WindowDimensions';
 
-
-
 const Navbar = ({ dropdownMenu, setDropdownMenu }) => {
 
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
@@ -24,14 +22,15 @@ const Navbar = ({ dropdownMenu, setDropdownMenu }) => {
     };
 
     return (
-        <div className='navbar'>
+        <>
+        <nav className='navbar'>
             <div className='navbar-content'>
                 <figure className='navbar-logo'>
                     <img src={logo} alt='Muled Wine Logo' /> 
                 </figure>
                 <div className='navbar-menu'>
                     {windowDimensions.width < 1024 && (
-                        <div className={dropdownMenu ? 'menu-btn' : 'menu-btn is-active'} onClick={handleClick}>
+                        <div className={dropdownMenu ? 'menu-btn is-active' : 'menu-btn'} onClick={handleClick}>
                             <div className='menu-burger'/>
                         </div>
                     )}
@@ -45,7 +44,18 @@ const Navbar = ({ dropdownMenu, setDropdownMenu }) => {
                     )}
                 </div>
             </div>
-        </div>
+        </nav>
+        <nav className={dropdownMenu ? 'dropdown-menu-wrap is-active' : 'dropdown-menu-wrap'}>
+            <div className={dropdownMenu ? 'dropdown-menu is-active' : 'dropdown-menu'}>
+                <ul className='menu-links dropdown'>
+                    <li>Årets smaker</li>
+                    <li>Tidigare års smaker</li>
+                    <li>Om Glögga AB</li>
+                    <li>Kontakt</li>
+                </ul>
+            </div>
+        </nav>
+        </>
     );
 };
 

@@ -79,6 +79,7 @@ $hover-color: #f8cc80;
 
 .cookie {
     display: flex;
+    z-index: 10;
     flex-direction: column;
     background: #25271c;
     color: #ffffff;
@@ -246,6 +247,20 @@ $hover-color: #f8cc80;
     }
 }
 
+.menu-links.dropdown {
+    position: relative;
+    top: 20%;
+
+    li {
+        display: block;
+        text-align: center;
+        width: max-content;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+}
+
 // menu burger
 .menu-btn {
     cursor: pointer;
@@ -294,5 +309,38 @@ $hover-color: #f8cc80;
   
 .menu-btn.is-active .menu-burger::after {
     transform: rotate(135deg);
+}
+
+// dropdown menu 
+
+.dropdown-menu-wrap {
+    position: fixed;
+    z-index: 9;
+    width: 100vw;
+    height: 0;
+    background-color: #25271CD9;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    
+}
+
+.dropdown-menu-wrap.is-active {
+    min-height: max-content;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+}
+
+.dropdown-menu {
+    height: 100%;
+    opacity: 0;
+    text-align: center;
+}
+  
+.dropdown-menu.is-active {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s 0.3s;
+    transition: opacity 0.3s 0.3s;
 }
 
