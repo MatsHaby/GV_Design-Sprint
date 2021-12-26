@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header/Header.jsx';
 import Cookie from './components/Cookie/Cookie.jsx';
+import Glogg from './components/Glogg/Glogg.jsx';
 import './App.scss';
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
                     setVisibleCookie={setVisibleCookie}
                 />
             )}
+
+            <Glogg />
         </div>
     );
 }
