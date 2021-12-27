@@ -193,30 +193,31 @@ $hover-color: #f8cc80;
 
 
 // NAVBAR
-
 .navbar {
   height: 96px;
   background: #25271C;
   position: sticky;
 
-  .navbar-content {
+  &-content {
     height: auto;
     padding: 30px;
     margin: 0 auto;
     padding-top: 20px;
+  }
 
-    .navbar-logo {
-        float:left;
-    }
-    
-    .navbar-menu {
-        float:right;
-        position: relative;
-        top: 20px;
-    }
+  &-logo {
+    float:left;
+  }
+
+  &-menu {
+    float:right;
+    position: relative;
+    top: 20px;
   }
 }
 
+
+// menu links
 .menu-links {
     list-style: none;
 
@@ -248,6 +249,7 @@ $hover-color: #f8cc80;
     }
 }
 
+
 .menu-links.dropdown {
     position: relative;
     margin: 40px;
@@ -269,7 +271,21 @@ $hover-color: #f8cc80;
     position: absolute;
     right: 0;
     top: -10px;
+
+  /* transform menu burger to exit */
+  &.is-active .menu-burger {
+    background: transparent;
+  }
+  
+  &.is-active .menu-burger::before {
+    transform: rotate(-135deg);
+  }
+  
+  &.is-active .menu-burger::after {
+    transform: rotate(135deg);
+  }
 }
+
 
 .menu-burger {
     position: relative;
@@ -279,69 +295,56 @@ $hover-color: #f8cc80;
     transition: all .1s ease-in-out;
     margin: 0 auto;
     top: 18px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 55px;
+        height: 4px;
+        background: rgb(255, 255, 255);
+        transition: all .3s ease-in-out;
+    }
+
+    &::before {
+        transform: translateY(-12px);
+    }
+      
+    &::after {
+        transform: translateY(12px);
+    }
 }
 
-.menu-burger::before,
-.menu-burger::after {
-    content: '';
-    position: absolute;
-    width: 55px;
-    height: 4px;
-    background: rgb(255, 255, 255);
-    transition: all .3s ease-in-out;
-}
-
-.menu-burger::before {
-    transform: translateY(-12px);
-}
-  
-.menu-burger::after {
-    transform: translateY(12px);
-}
-  
-/* transform menu burger to exit */
-.menu-btn.is-active .menu-burger {
-    background: transparent;
-}
-  
-.menu-btn.is-active .menu-burger::before {
-    transform: rotate(-135deg);
-}
-  
-.menu-btn.is-active .menu-burger::after {
-    transform: rotate(135deg);
-}
 
 // dropdown menu 
-
 .dropdown-menu-wrap {
     position: absolute;
     z-index: 9;
     width: 100vw;
+    min-height: 0;
     height: 0;
-    background-color: #25271CD9;
-    opacity: 0;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s;
+    -webkit-transition: width 0.3s, min-height 0.3s, height 0.3s;
+    transition: width 0.3s, min-height 0.3s, height 0.3s;
+    background-color: #383b2b;
+
+    &.is-active {
+      width: 100vw;
+      min-height: 500px;
+      height: 100vh;
+    }
 }
 
-.dropdown-menu-wrap.is-active {
-    width: 100vw;
-    height: calc(100vh - 96px);
-    min-height: 500px;
-    opacity: 1;
-}
 
 .dropdown-menu {
     opacity: 0;
     text-align: center;
     position: relative;
     top: 15%;
+
+    &.is-active {
+      opacity: 1;
+      -webkit-transition: opacity 0.3s 0.3s;
+      transition: opacity 0.3s 0.3s;
+    }
 }
   
-.dropdown-menu.is-active {
-    opacity: 1;
-    -webkit-transition: opacity 0.3s 0.3s;
-    transition: opacity 0.3s 0.3s;
-}
-
