@@ -4,16 +4,16 @@ import getWindowDimensions from './WindowDimensions';
 
 const Navbar = ({ dropdownMenu, setDropdownMenu }) => {
 
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
   
-  // Get window dimensions
-  useEffect(() => {
-    function handleResize() {
+    // Get window dimensions
+    useEffect(() => {
+      function handleResize() {
         setWindowDimensions(getWindowDimensions());
     }
 
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const handleClick = () => {
