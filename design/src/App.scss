@@ -100,7 +100,7 @@ $ribbon-color: #9a0017;
     height: 10em;
     z-index: 9999;
     top: 0;
-    right: 2%;
+    right: 10%;
     background: $ribbon-color;
     padding: 5px 0;
 }
@@ -153,6 +153,38 @@ $ribbon-color: #9a0017;
     background-color: #25271c; 
     border: none;
     height: 22em;   
+}
+
+.glogg-row3{
+    background-color: #9d8471;
+    padding-top: 250px;
+}
+
+.glogg{
+    width: 40%;
+    padding: 5%;
+    padding-left: 25%;
+}
+
+.glogg img{
+    border-radius: 60px 0 0 0;
+}
+
+.gloggText{
+    background-color: #25271c;
+    padding: 2px 16px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    padding: 120px 20px 20px 20px;
+    border-radius: 20px;
+    margin: -120px 0px 0px 0px;
+    line-height: 19px;
+    font-size: 14px;
+    width: 300px;
+    color: white;
+    font-style: Lato;
+    text-align: center;
+    height: 250px;
+    border-bottom-right-radius: 60px;
 }
 
 // TABLET
