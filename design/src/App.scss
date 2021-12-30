@@ -104,50 +104,53 @@ $ribbon-color: #9a0017;
     background: $ribbon-color;
     padding: 5px 0;
 
-    .glogg-ribbon-text:before {
-        content: "";
-        position: absolute;
-        bottom: -4em;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-top: 5em solid $ribbon-color;
-        border-right: 5em solid transparent;
-        z-index: -1;
-    }
+}
 
-    .glogg-ribbon-text:after {
-        content: "";
-        position: absolute;
-        bottom: -4em;
-        right: 0;
-        width: 0;
-        height: 0;
-        border-top: 5em solid $ribbon-color;
-        border-left: 5em solid transparent;
-        z-index: -1;
-    }
+.glogg-ribbon-text:before {
+    content: "";
+    position: absolute;
+    bottom: -4em;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 5em solid $ribbon-color;
+    border-right: 5em solid transparent;
+    z-index: -1;
+}
+
+.glogg-ribbon-text:after {
+    content: "";
+    position: absolute;
+    bottom: -4em;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 5em solid $ribbon-color;
+    border-left: 5em solid transparent;
+    z-index: -1;
 }
 
 .glogg-ribbon {
     z-index: 99999;
     position: relative;
     margin: 0 5px;
+    background-color: #25271c;
+    font-size: 2.5vw;
 }
 
 .glogg-text {
     color: #ffffff;
-    font-size: -0.2em;
+    font-size: 2.9vw;
     font-family: Lato;
     position: relative;
-    margin-top: 18em;
+    margin-top: 15em;
     margin: 0;
     padding: 15px;
     line-height: 16px;
-    background-color: #25271c; 
     top: 21em;
     line-height: 1.5;
-    height: 13em;
+    height: 15em;
+    background-color: #25271c;
 }
 
 .glogg-row2 {
@@ -172,7 +175,6 @@ $ribbon-color: #9a0017;
 }
 
 .gloggText {
-    background-color: #25271c;
     padding: 2px 16px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     padding: 120px 20px 20px 20px;
@@ -186,6 +188,7 @@ $ribbon-color: #9a0017;
     text-align: center;
     height: 250px;
     border-bottom-right-radius: 60px;
+    background-color: #25271c;
 }
 
 .cookie {
@@ -253,6 +256,28 @@ $ribbon-color: #9a0017;
             height: 65px;
             font-size: 26px;
         }
+    }
+
+    .glogg-ribbon {
+        display: none;
+    }
+
+    .glogg-text {
+        top: 0em;
+        padding: 6vh;
+    }
+
+    .glogg-row3 {
+        display: inline-flex;
+        flex-wrap: wrap;
+        padding-right: 20vw;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        justify-content: space-between;
+    }
+
+    .glogg {
+        padding-left: 8%;
     }
 
     .cookie {
