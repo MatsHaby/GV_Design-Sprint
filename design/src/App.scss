@@ -15,7 +15,7 @@ $ribbon-color: #9a0017;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 96px);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -274,7 +274,7 @@ $ribbon-color: #9a0017;
         &-body {
             position: absolute;
             left: 118px;
-            top: 250px;
+            top: 30%;
             max-width: 900px;
             display: block;
         }
@@ -298,4 +298,103 @@ $ribbon-color: #9a0017;
         }
     }
 
+
 }
+
+// NAVBAR
+
+.navbar {
+  height: 96px;
+  background: #25271C;
+  position: sticky;
+
+  .navbar-content {
+    height: auto;
+    padding: 30px;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    .navbar-logo {
+        float:left;
+    }
+    
+    .navbar-menu {
+        float:right;
+        position: relative;
+        top: 20px;
+    }
+  }
+}
+
+.menu-links {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin-left: 36px;
+        font-family: Archivo;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 22px;
+        text-align: right;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 5px;
+    }
+
+    li:hover {
+        color: #f8cc80;
+        border-bottom: 2px solid #f8cc80;
+    }
+
+    li:active {
+        color: #fff;
+        border-bottom: 2px solid #fff;
+    }
+}
+
+// menu burger
+.menu-burger {
+    position: relative;
+    width: 55px;
+    height: 4px;
+    background: rgb(255, 255, 255);
+    transition: all .1s ease-in-out;
+    margin: 0 auto;
+    top: 5px;
+}
+
+.menu-burger::before,
+.menu-burger::after {
+    content: '';
+    position: absolute;
+    width: 55px;
+    height: 4px;
+    background: rgb(255, 255, 255);
+    transition: all .3s ease-in-out;
+}
+
+.menu-burger::before {
+    transform: translateY(-12px);
+}
+  
+.menu-burger::after {
+    transform: translateY(12px);
+}
+  
+/* transform menu burger to exit */
+.menu-btn.is-active .menu-burger {
+    background: transparent;
+}
+  
+.menu-btn.is-active .menu-burger::before {
+    transform: rotate(-135deg);
+}
+  
+.menu-btn.is-active .menu-burger::after {
+    transform: rotate(135deg);
+}
+
