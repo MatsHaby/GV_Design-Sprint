@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header/Header.jsx';
 import Cookie from './components/Cookie/Cookie.jsx';
+import Navbar from './components/Navbar/Navbar.jsx';
 import './App.scss';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 
     return (
         <div className="App">
+            <Navbar /> 
             <Header />
             {visibleCookie && (
                 <Cookie
