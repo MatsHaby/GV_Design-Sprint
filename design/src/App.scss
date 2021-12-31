@@ -312,6 +312,39 @@ $ribbon-color: #9a0017;
         }
     }
 
+    .glogg-row1 h1 {
+        font-size: 8.36em;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .glogg-text {
+        top: 0em;
+        padding: 6vh;
+        text-align: left;
+        padding-right: 50%;
+        font-size: 1.4em;
+    }
+    
+    .glogg-ribbon {
+        display: initial;
+        padding-right: 100vw;
+    }
+
+    .glogg-ribbon-text {
+        font-size: 0.5em;
+    }
+
+    .glogg-row3 {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-top: 10vh;
+        padding-bottom: 0;
+        justify-content: center;
+        padding-left: 15vw;
+        width: 100%;
+    }
+
     .cookie {
         &__button {
             font-size: 25px;
