@@ -4,6 +4,11 @@ $secondary-color2: #25271c;
 $hover-color: #f8cc80;
 $ribbon-color: #9a0017;
 
+// font-size
+@function rem($px) {
+    @return ($px / 16px) * 1rem;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +45,7 @@ $ribbon-color: #9a0017;
         font-family: 'Merienda', cursive;
         font-style: normal;
         font-weight: bold;
-        font-size: 50px;
+        font-size: rem(50px);
         line-height: 72px;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         text-align: center;
@@ -49,7 +54,7 @@ $ribbon-color: #9a0017;
     .btn-primary__hero {
         width: 278.86px;
         height: 53px;
-        font-size: 24px;
+        font-size: rem(24px);
         margin-top: 30px;
         color: inherit;
         border: none;
@@ -190,6 +195,7 @@ $ribbon-color: #9a0017;
 
 .cookie {
     display: flex;
+    z-index: 10;
     flex-direction: column;
     background: #25271c;
     color: #ffffff;
@@ -303,30 +309,31 @@ $ribbon-color: #9a0017;
 }
 
 // NAVBAR
-
 .navbar {
   height: 96px;
   background: #25271C;
   position: sticky;
 
-  .navbar-content {
+  &-content {
     height: auto;
     padding: 30px;
     margin: 0 auto;
     padding-top: 20px;
+  }
 
-    .navbar-logo {
-        float:left;
-    }
-    
-    .navbar-menu {
-        float:right;
-        position: relative;
-        top: 20px;
-    }
+  &-logo {
+    float:left;
+  }
+
+  &-menu {
+    float:right;
+    position: relative;
+    top: 20px;
   }
 }
 
+
+// menu links
 .menu-links {
     list-style: none;
 
@@ -336,7 +343,7 @@ $ribbon-color: #9a0017;
         font-family: Archivo;
         font-style: normal;
         font-weight: bold;
-        font-size: 20px;
+        font-size: rem(20px);
         line-height: 22px;
         text-align: right;
         text-transform: uppercase;
@@ -344,6 +351,7 @@ $ribbon-color: #9a0017;
         cursor: pointer;
         border-bottom: 2px solid transparent;
         padding-bottom: 5px;
+        width: max-content;
     }
 
     li:hover {
@@ -357,7 +365,44 @@ $ribbon-color: #9a0017;
     }
 }
 
+
+.menu-links.dropdown {
+    position: relative;
+    margin: 40px;
+
+    li {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        line-height: 1.2em;
+        font-size: rem(30px);
+    }
+}
+
 // menu burger
+.menu-btn {
+    cursor: pointer;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: -10px;
+
+  /* transform menu burger to exit */
+  &.is-active .menu-burger {
+    background: transparent;
+  }
+  
+  &.is-active .menu-burger::before {
+    transform: rotate(-135deg);
+  }
+  
+  &.is-active .menu-burger::after {
+    transform: rotate(135deg);
+  }
+}
+
+
 .menu-burger {
     position: relative;
     width: 55px;
@@ -365,37 +410,57 @@ $ribbon-color: #9a0017;
     background: rgb(255, 255, 255);
     transition: all .1s ease-in-out;
     margin: 0 auto;
-    top: 5px;
+    top: 18px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 55px;
+        height: 4px;
+        background: rgb(255, 255, 255);
+        transition: all .3s ease-in-out;
+    }
+
+    &::before {
+        transform: translateY(-12px);
+    }
+      
+    &::after {
+        transform: translateY(12px);
+    }
 }
 
-.menu-burger::before,
-.menu-burger::after {
-    content: '';
+
+// dropdown menu 
+.dropdown-menu-wrap {
     position: absolute;
-    width: 55px;
-    height: 4px;
-    background: rgb(255, 255, 255);
-    transition: all .3s ease-in-out;
+    z-index: 9;
+    width: 100vw;
+    min-height: 0;
+    height: 0;
+    -webkit-transition: width 0.3s, min-height 0.3s, height 0.3s;
+    transition: width 0.3s, min-height 0.3s, height 0.3s;
+    background-color: #383b2b;
+
+    &.is-active {
+      width: 100vw;
+      min-height: 500px;
+      height: 100vh;
+    }
 }
 
-.menu-burger::before {
-    transform: translateY(-12px);
-}
-  
-.menu-burger::after {
-    transform: translateY(12px);
-}
-  
-/* transform menu burger to exit */
-.menu-btn.is-active .menu-burger {
-    background: transparent;
-}
-  
-.menu-btn.is-active .menu-burger::before {
-    transform: rotate(-135deg);
-}
-  
-.menu-btn.is-active .menu-burger::after {
-    transform: rotate(135deg);
-}
 
+.dropdown-menu {
+    opacity: 0;
+    text-align: center;
+    position: relative;
+    top: 15%;
+
+    &.is-active {
+      opacity: 1;
+      -webkit-transition: opacity 0.3s 0.3s;
+      transition: opacity 0.3s 0.3s;
+    }
+}
+  
