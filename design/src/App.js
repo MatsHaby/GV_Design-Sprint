@@ -18,6 +18,8 @@ function App() {
                 />
             )} */}
             <Form />
+
+            {/* <Footer /> */}
         </div>
     );
 }
