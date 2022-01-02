@@ -10,16 +10,16 @@ function App() {
 
     return (
         <div className="App">
-            {/* <Header />
+            <Header />
             {visibleCookie && (
                 <Cookie
                     visibleCookie={visibleCookie}
                     setVisibleCookie={setVisibleCookie}
                 />
-            )} */}
+            )}
             <Form />
 
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }

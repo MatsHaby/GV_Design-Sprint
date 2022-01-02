@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
 
@@ -10,16 +10,16 @@ const Footer = () => {
     <p>010-11 22 333<br />kundservice@glogga.se</p>
    </div>
    <div className="footer-item second">
-    <a href="#">OM OSS</a>
-    <a href="#">JOBBA HÄR</a>
-    <a href="#">KÖPVILLKOR</a>
-    <a href="#">FAQ</a>
+    <a href="www.omoss.se">Om oss</a>
+    <a href="www.jobba.se">Jobba här</a>
+    <a href="www.vilkor.se">Köpvilkor</a>
+    <a href="#">Faq</a>
    </div>
    <div className="footer-item third">
-    <a href="#"><img src="images/instagram.png" alt="" /></a>
-    <a href="#"><img src="images/facebook.png" alt="" /></a>
-    <a href="#"><img src="images/twitter.png" alt="" /></a>
-    <a href="#"><img src="images/youtube.png" alt="" /></a>
+    <a href="#"><img src="../../img/instagram.png" alt="Besök vår Instagram sida" /></a>
+    <a href="#"><img src="../../img/facebook.png" alt="Besök vår Facebook sida" /></a>
+    <a href="#"><img src="../../img/twitter.png" alt="Besök vår Twitter sida" /></a>
+    <a href="#"><img src="../../img/youtube.png" alt="Besök vår Youtube kanal" /></a>
    </div>
   </footer>
  )
