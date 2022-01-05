@@ -1,4 +1,9 @@
 import React from 'react';
+import Twitter from '../assets/img/twitter.png';
+import Facebook from '../assets/img/facebook.png';
+import Instagram from '../assets/img/instagram.png';
+import Youtube from '../assets/img/youtube.png';
+
 
 const Footer = () => {
 
@@ -16,10 +21,10 @@ const Footer = () => {
     <a href="#">Faq</a>
    </div>
    <div className="footer-item third">
-    <a href="#"><img src="../../img/instagram.png" alt="Besök vår Instagram sida" /></a>
-    <a href="#"><img src="../../img/facebook.png" alt="Besök vår Facebook sida" /></a>
-    <a href="#"><img src="../../img/twitter.png" alt="Besök vår Twitter sida" /></a>
-    <a href="#"><img src="../../img/youtube.png" alt="Besök vår Youtube kanal" /></a>
+    <a href="#"><img src={Instagram} alt="Besök vår Instagram sida" /></a>
+    <a href="#"><img src={Facebook} alt="Besök vår Facebook sida" /></a>
+    <a href="#"><img src={Twitter} alt="Besök vår Twitter sida" /></a>
+    <a href="#"><img src={Youtube} alt="Besök vår Youtube kanal" /></a>
    </div>
   </footer>
  )
