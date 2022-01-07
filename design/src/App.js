@@ -6,6 +6,8 @@ import Cookie from './components/Cookie/Cookie.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
 
 import './App.scss';
+import Form from './components/Form.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
                     setVisibleCookie={setVisibleCookie}
                 />
             )}
+            <Form />
+            <Footer />
         </div>
     );
 }

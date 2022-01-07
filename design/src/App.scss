@@ -239,6 +239,166 @@ $ribbon-color: #9a0017;
     }
 }
 
+//Form
+.img-overlay {
+  width: 100vw;
+  max-width: 100%;
+  position: absolute;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 100;
+}
+
+.form-section {
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  height: 100vh;
+  background-image: url('../../img/background.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper {
+  width: 90%;
+  height: auto;
+  background-color: rgba(157,132,113,0.9);
+  border-radius: 30px 0px 30px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding:20px 0px;
+  position: relative;
+  z-index: 101;
+}
+
+.form-wrapper h3 {
+  font-family: 'Merienda';
+  font-weight: bold;
+  color:white;
+  font-size: 1.3em;
+  text-shadow: 1px 1px #333;
+}
+
+.form-wrapper input[type="text"] {
+  width: 90%;
+  border-radius: 15px;
+  color:black;
+  padding: 15px 20px;
+  border: none;
+  margin: 18px 0px;
+  background-color:#d2d2d2;
+  font-family: 'Lato';
+  font-weight: bold;
+}
+
+.form-wrapper input::placeholder {
+  color: black;
+}
+
+.form-wrapper input[type="submit"] {
+  background-color: #9A0017;
+  color:white;
+  border: none;
+  padding: 10px 0px;
+  width: 40%;
+  border-radius: 17px;
+  font-weight: normal;
+  font-size: 1.3em;
+  margin: 18px 0px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.form-wrapper input:hover[type="submit"] {
+  background-color: #b55966;
+}
+
+//Footer
+footer.footer {
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  background-color: #9D8471;
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-item {
+  color:white;
+  font-family: 'Archivo';
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 0;
+  position: relative;
+  height: 100%;
+}
+
+.footer-item.first {
+  width: 90%;
+  /* border-right: 1px solid white; */
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
+}
+
+.footer-item.first p {
+  margin: 10px 0;
+}
+
+.footer-item.first p:nth-child(n+2) {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.footer-item.first p:nth-child(3) {
+  margin-left: 20px;
+}
+
+.footer-item.second {
+  width: 90%;
+}
+
+.footer-item.second {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-item.second a {
+  width: 50%;
+  margin: 20px 0px;
+  text-transform: uppercase;
+}
+
+.footer-item.third {
+  width: 90%;
+  text-align: center;
+}
+
+.footer-item.second a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 10px 0px;
+}
+
+.footer-item.third a {
+  position: relative;
+  top: 0vh;
+  margin: 0px 20px;
+}
+
+.footer-item.third a img {
+  width: 42px;
+}
+
+
 // TABLET
 @media screen and (min-width: 768px) {
     .hero {
@@ -293,6 +453,32 @@ $ribbon-color: #9a0017;
             max-width: 534px;
         }
     }
+
+  .form-wrapper {
+    width: 90%;
+  }
+
+  .footer-item.first {
+    width: 40%;
+    border-right: 1px solid white;
+    border-bottom: 0px solid white;
+    padding-right: 5%;
+  }
+
+  .footer-item.first p:nth-child(n+2) {
+    display: block;
+    font-size: 16px;
+  }
+
+  .footer-item.first p:nth-child(3) {
+    margin-left: 0px;
+  }
+
+  .footer-item.second {
+    width: 30%;
+    display: block;
+  }
+
 }
 
 // Desktop
@@ -520,5 +706,47 @@ $ribbon-color: #9a0017;
       -webkit-transition: opacity 0.3s 0.3s;
       transition: opacity 0.3s 0.3s;
     }
+  .form-wrapper {
+    width: 30vw;
+    min-height: 40vh;
+  }    
+
+
+  //Footer
+  footer.footer {
+    justify-content: flex-start;
+    min-height: 25vh;
+  }
+
+  .footer-item {
+    padding: 0px 0px 0px 50px;
+  }
+
+  .footer-item.first {
+    width: 20%;
+    border: none;
+    padding-right: 5%;
+  }
+
+  .footer-item.first p {
+    margin: 15px 0px;
+  }
+
+  .footer-item.second {
+    width: 20%;
+    display: block;
+    border-left: 1px solid white;
+  }
+
+  .footer-item.third {
+    width: 35%;
+    text-align: center;
+  }
+
+  .footer-item.third a {
+    position: relative;
+    top: 8vh;
+    margin: 0px 20px;
+  }
 }
   
