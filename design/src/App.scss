@@ -91,6 +91,8 @@ $ribbon-color: #9a0017;
     align-items: center;
     justify-content: space-between;
     padding: 30px 30px 30px 30px;
+      z-index: 102;
+
     &__button {
         background: #eaa324;
         font-family: Lato;
